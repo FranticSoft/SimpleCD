@@ -1,0 +1,31 @@
+{
+  "name": "simplecd",
+  "version": "1.0.0",
+  "description": "A simple way to set up CI/CD with any Git provider",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranticSoft/SimpleCD.git"
+  },
+  "keywords": [
+    "CI/CD"
+  ],
+  "bin": {
+    "simplecd": "./index.js"
+  },
+  "author": "FRANTIC! Software LLC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FranticSoft/SimpleCD/issues"
+  },
+  "homepage": "https://github.com/FranticSoft/SimpleCD#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "readline": "^1.3.0",
+    "simple-git": "^3.22.0"
+  }
+}
