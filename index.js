@@ -8,6 +8,7 @@ const rl = readline.createInterface({
 const fs = require('fs')
 const express = require('express');
 const git = require('simple-git');
+const { exit } = require('process');
 const app = express();
 const port = 12345; 
 
@@ -56,10 +57,25 @@ function configure() {
     });
   }
   
+  function help() {
+    console.log(`
+    ███████ ██ ███    ███ ██████  ██      ███████  ██████ ██████  
+    ██      ██ ████  ████ ██   ██ ██      ██      ██      ██   ██ 
+    ███████ ██ ██ ████ ██ ██████  ██      █████   ██      ██   ██ 
+         ██ ██ ██  ██  ██ ██      ██      ██      ██      ██   ██ 
+    ███████ ██ ██      ██ ██      ███████ ███████  ██████ ██████  
+                                                                                                                                                                                                                                                                        
+`)
+console.log("SimpleCD: The easier way to set up a CI/CD Pipeline.")
+console.log("Availible commands: configure, start, help")
+exit(1);
+  }
+
 // Map commands to functions
 const commandMap = {
   configure,
   start,
+  help
 };
 
 // Parse command-line arguments
@@ -71,5 +87,5 @@ const selectedCommand = commandMap[command];
 if (selectedCommand) {
   selectedCommand();
 } else {
-  console.error("Invalid command. Available commands: configure, start");
+  console.error("Invalid command. Available commands: configure, start, help");
 }
