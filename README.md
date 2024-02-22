@@ -1,4 +1,4 @@
-## SimpleCD: The easier way to set up a CI/CD Pipeline.
+# SimpleCD: The easier way to set up a CI/CD Pipeline.
 
 SimpleCD is the best way to Continuous Delivery pipeline, it's FOSS, and compatable with any Git provider (GitHub, GitLab, BitBucket, Amazon CodeCommit, etc.)
 
